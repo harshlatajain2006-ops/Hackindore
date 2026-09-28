@@ -1,0 +1,192 @@
+{
+  "users": [
+    {
+      "id": "user-admin",
+      "name": "Sarthi Administrator",
+      "email": "admin@sarthi.sec",
+      "passwordHash": "admin2026!",
+      "role": "ADMIN",
+      "roleTitle": "Principal Security Administrator",
+      "department": "Global Cyber Defense Center",
+      "avatarColor": "bg-indigo-600",
+      "createdAt": "2026-01-10T08:00:00.000Z"
+    },
+    {
+      "id": "user-alex",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@appsec.io",
+      "passwordHash": "appsec123",
+      "role": "APPSEC_LEAD",
+      "roleTitle": "Lead Application Security Architect",
+      "department": "AppSec & Product Security",
+      "avatarColor": "bg-red-500",
+      "createdAt": "2026-03-01T10:00:00.000Z"
+    },
+    {
+      "id": "user-priya",
+      "name": "Priya Sharma",
+      "email": "priya.sharma@redteam.io",
+      "passwordHash": "redteam123",
+      "role": "PENTESTER",
+      "roleTitle": "Senior Penetration Tester & Red Teamer",
+      "department": "Offensive Security",
+      "avatarColor": "bg-amber-500",
+      "createdAt": "2026-03-05T14:30:00.000Z"
+    },
+    {
+      "id": "user-marcus",
+      "name": "Marcus Chen",
+      "email": "marcus.chen@devops.io",
+      "passwordHash": "devops123",
+      "role": "DEVSECOPS",
+      "roleTitle": "DevSecOps & Platform Engineer",
+      "department": "Cloud Platform & Infrastructure",
+      "avatarColor": "bg-emerald-500",
+      "createdAt": "2026-03-10T09:15:00.000Z"
+    },
+    {
+      "id": "user-elena",
+      "name": "Elena Rostova",
+      "email": "elena.rostova@corp.io",
+      "passwordHash": "ciso123",
+      "role": "CISO",
+      "roleTitle": "VP of Cybersecurity & Risk Officer",
+      "department": "Executive Risk & Compliance",
+      "avatarColor": "bg-cyan-500",
+      "createdAt": "2026-02-15T08:00:00.000Z"
+    },
+    {
+      "id": "user-1790502767984",
+      "name": "mayank",
+      "email": "iitianmayankpawar157@gmail.com",
+      "passwordHash": "mayankpawa",
+      "role": "APPSEC_LEAD",
+      "roleTitle": "Security Engineer",
+      "department": "AppSec Team",
+      "avatarColor": "bg-cyan-500",
+      "createdAt": "2026-09-27T09:52:47.984Z"
+    },
+    {
+      "id": "user-1790504239491",
+      "name": "Rohan Verma",
+      "email": "rohan.verma@sarthi.sec",
+      "passwordHash": "rohanpassword",
+      "role": "PENTESTER",
+      "roleTitle": "Offensive Security Specialist",
+      "department": "Red Team Labs",
+      "avatarColor": "bg-rose-600",
+      "createdAt": "2026-09-27T10:17:19.491Z"
+    },
+    {
+      "id": "user-1790538206925",
+      "name": "mayank",
+      "email": "mayankpawar372@gmail.com",
+      "passwordHash": "mayank",
+      "role": "PENTESTER",
+      "roleTitle": "Senior Penetration Tester & Red Team",
+      "department": "Product Security",
+      "avatarColor": "bg-blue-600",
+      "createdAt": "2026-09-27T19:43:26.925Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-1",
+      "targetEndpoint": "/auth/v2/user/verify-otp",
+      "method": "POST",
+      "title": "Implement Redis Leaky Bucket Rate Limiting on MFA OTP verification",
+      "riskReduction": 78,
+      "effortScore": 2,
+      "quadrant": "QUICK_WINS",
+      "assignedToUserId": "user-marcus",
+      "assignedToName": "Marcus Chen",
+      "status": "IN_PROGRESS",
+      "notes": "Configuring Express rate limit middleware with 5 attempts per IP/Email per 15 min.",
+      "createdAt": "2026-09-27T01:00:00.000Z"
+    },
+    {
+      "id": "task-2",
+      "targetEndpoint": "/workshop/api/shop/orders/{order_id}",
+      "method": "GET",
+      "title": "Introduce Resource Ownership Middleware for Order BOLA",
+      "riskReduction": 55,
+      "effortScore": 6,
+      "quadrant": "STRATEGIC",
+      "assignedToUserId": "user-alex",
+      "assignedToName": "Alex Rivera",
+      "status": "BLOCKED",
+      "notes": "Blocked pending database indexing review to prevent query latency on ownership checks.",
+      "createdAt": "2026-09-27T01:30:00.000Z"
+    },
+    {
+      "id": "task-3",
+      "targetEndpoint": "/api/v1/cards/{card_id}/cvv",
+      "method": "GET",
+      "title": "Sanitize Card Response DTO & Deprecate Plaintext CVV Output",
+      "riskReduction": 62,
+      "effortScore": 3,
+      "quadrant": "QUICK_WINS",
+      "assignedToUserId": "user-priya",
+      "assignedToName": "Priya Sharma",
+      "status": "RESOLVED",
+      "notes": "Redacted CVV from JSON serialization schema. Regression verified via Postman test suite.",
+      "createdAt": "2026-09-26T18:00:00.000Z"
+    },
+    {
+      "id": "task-4",
+      "targetEndpoint": "/api/v1/admin/refunds/{id}/approve",
+      "method": "POST",
+      "title": "Enforce RBAC Super-Admin Token Claims on Merchant Chargebacks",
+      "riskReduction": 70,
+      "effortScore": 7,
+      "quadrant": "STRATEGIC",
+      "assignedToUserId": "user-alex",
+      "assignedToName": "Alex Rivera",
+      "status": "IN_PROGRESS",
+      "notes": "Integrating OAuth2 role claims check on Express middleware layer.",
+      "createdAt": "2026-09-27T02:00:00.000Z"
+    },
+    {
+      "id": "task-5",
+      "targetEndpoint": "/community/api/v2/community/posts/recent",
+      "method": "GET",
+      "title": "Filter Internal Author IDs and PII from Public Forum Endpoints",
+      "riskReduction": 42,
+      "effortScore": 2,
+      "quadrant": "LOW_HANGING",
+      "assignedToUserId": "user-marcus",
+      "assignedToName": "Marcus Chen",
+      "status": "RESOLVED",
+      "notes": "Excluded user_id and email from public post author serializer.",
+      "createdAt": "2026-09-26T20:15:00.000Z"
+    },
+    {
+      "id": "task-6",
+      "targetEndpoint": "/api/prescriptions/{rx_id}",
+      "method": "PUT",
+      "title": "Enforce Physician Signature Verification for Controlled Substances",
+      "riskReduction": 48,
+      "effortScore": 8,
+      "quadrant": "STRATEGIC",
+      "assignedToUserId": "user-priya",
+      "assignedToName": "Priya Sharma",
+      "status": "BLOCKED",
+      "notes": "Blocked waiting on pharmacy regulatory team approval for digital signature payload format.",
+      "createdAt": "2026-09-27T00:30:00.000Z"
+    },
+    {
+      "id": "task-7",
+      "targetEndpoint": "/api/admin/audit-logs",
+      "method": "GET",
+      "title": "Restructure HIPAA Audit Log Ingestion with Mutual TLS Authentication",
+      "riskReduction": 65,
+      "effortScore": 5,
+      "quadrant": "STRATEGIC",
+      "assignedToUserId": "user-elena",
+      "assignedToName": "Elena Rostova",
+      "status": "IN_PROGRESS",
+      "notes": "Architecting mTLS cert validation for internal compliance log forwarder.",
+      "createdAt": "2026-09-27T01:45:00.000Z"
+    }
+  ]
+}

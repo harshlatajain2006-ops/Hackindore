@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --bg-base: #051F20;
+    --bg-secondary: #0B2B26;
+    --surface: #163832;
+    --surface-elevated: #1D443D;
+    --surface-hover: #235347;
+    --border-soft: rgba(218, 241, 222, 0.12);
+    --border-strong: rgba(142, 182, 155, 0.34);
+    --text-main: #EDF7ED;
+    --text-soft: #DAF1DE;
+    --text-muted: #9BBBA3;
+    --accent: #8EB69B;
+    --accent-soft: rgba(142, 182, 155, 0.16);
+    --cta: #9CD4A8;
+    --success: #A9E6B1;
+    --warning: #D9C77A;
+    --danger: #F2957F;
+  }
+
+  [data-theme='green-premium'] {
+    --bg-base: #051F20;
+    --bg-secondary: #0B2B26;
+    --surface: #163832;
+    --surface-elevated: #1D443D;
+    --surface-hover: #235347;
+    --border-soft: rgba(218, 241, 222, 0.12);
+    --border-strong: rgba(142, 182, 155, 0.34);
+    --text-main: #EDF7ED;
+    --text-soft: #DAF1DE;
+    --text-muted: #9BBBA3;
+    --accent: #8EB69B;
+    --accent-soft: rgba(142, 182, 155, 0.16);
+    --cta: #9CD4A8;
+    --success: #A9E6B1;
+    --warning: #D9C77A;
+    --danger: #F2957F;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--bg-base);
+    scrollbar-color: rgba(142, 182, 155, 0.7) transparent;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, rgba(142, 182, 155, 0.12), transparent 24%),
+      radial-gradient(circle at top right, rgba(156, 212, 168, 0.08), transparent 22%),
+      linear-gradient(180deg, var(--bg-base) 0%, var(--bg-secondary) 100%);
+    color: var(--text-main);
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100vh;
+    background: transparent;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: rgba(142, 182, 155, 0.24);
+    color: var(--text-main);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 43, 38, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(142, 182, 155, 0.7);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(142, 182, 155, 0.9);
+}
+

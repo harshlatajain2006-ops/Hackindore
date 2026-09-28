@@ -1,0 +1,6 @@
+{
+  "name": "API State-Graph & Choke Point Validator",
+  "description": "API attack path discovery, validation engine, and choke point analyzer with what-if remediation simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
